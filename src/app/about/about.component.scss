@@ -1,0 +1,206 @@
+.about{
+    background-color: #1A374D;;
+    height: 350px;
+    width: 100%;
+    font-family: 'Source Code Pro', monospace;
+    
+}
+
+.center1{
+        padding-top: 80px;
+        p{
+            width: 500px !important;
+            text-align: justify !important;
+            line-height: 30px;
+        }
+}
+.nav-link{
+    font-size: 16px;
+    margin: 3px;
+    font-weight: 500;
+    padding-left: 10px;
+}
+.navbar-nav{
+    margin-right: 150px !important;
+}
+.navbar-brand{
+    font-size: 30px;
+}
+
+.nav-item{
+    margin-right: 10px;
+
+}
+.navbar{
+    background-color: transparent !important;
+  
+}
+.video {
+    background-image: url(../../assets/images/christmas-movies-07.webp);
+    height: 400px;
+    background-repeat: no-repeat;
+    width: 90%;
+    background-size: cover;
+    margin-left: 50px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin rings($duration, $delay) {
+    opacity: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    border-radius: 100%;
+    animation-name: ripple;
+    // animation-duration: $duration;
+    // animation-delay: $delay;
+    animation-duration: 1.5s;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+    // animation-timing-function: cubic-bezier(.65, 0, .34, 1);
+    animation-timing-function: ease-out ;
+    z-index: -1;
+}
+
+@keyframes ripple {
+    from {
+        opacity: 1;
+        transform: scale3d(0.75, 0.75, 1);
+    }
+    to {
+        opacity: 0;
+        transform: scale3d(1.1, 1.1, 1);
+    }
+}
+
+.request-loader {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    z-index: 3;
+    height: 100px;
+    width: 100px;
+    background: transparent;
+    // box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25);
+    &::after {
+        @include rings(1.5s, 0s);
+    }
+    // &::before {
+    //     @include rings(3s, 0.5s);
+    // }
+    i{
+        font-size: 20px;
+    }
+}
+.history{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    img{
+        border-radius: 20px;
+    }
+    p{
+        line-height: 1.2;
+        text-align: center;
+        margin-top: 40px;
+        font-size: 20px;
+    }
+    ul{
+        margin-top: 40px;
+    }
+    li{
+        margin-top: 15px;
+        font-size: 15px;
+    }
+    h1{
+        padding-top: 20px;
+    }
+}
+hr {
+    width: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #1A374D;
+    height: 2px;
+    border: 0 none;
+  }
+h1{
+    letter-spacing: 1px;
+}
+.staff{
+    padding-top: 30px;
+    background-color: #f8f9fa;;
+}
+.example-card{
+    margin: 10px;
+    border-radius: 20px;
+    
+    img{
+        border-radius: 20px;
+        padding: 5px;
+    }
+}
+.owl-theme .owl-nav [class*=owl-] {
+    background: rgb(158 158 158 / 28%) !important;
+    color: #222 !important;
+    height: 60px !important;
+    width: 60px !important;
+    border-radius: 50% !important;
+    position: absolute;
+    top: 50%;
+    transition: .3s all ease;
+}
+.staff .owl-next:hover, .staff .owl-prev:hover{
+    background-color: #ff4000 !important;
+    color: #fff !important;
+}
+.staff .owl-next{
+    right: -68px;
+    transform: translate(-50%, -50%);
+}
+.staff .owl-prev{
+    left: -68px;
+    transform: translate(-50%, -50%);
+}
+.staff .owl-next i, .staff .owl-prev i{
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.faq{
+    padding-top: 30px;
+    margin-top: 150px;
+    background-image: url(../../assets/images/magic-lights-blue-background_1053-44.webp);
+    width: 100%;
+    height: 520px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    h1{
+        color: white;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .faq {
+      height: 750px;
+    }
+    mat-expansion-panel{
+        margin-top: 10px !important;
+    }
+  }

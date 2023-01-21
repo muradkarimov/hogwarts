@@ -1,0 +1,176 @@
+<!-- <div class="about">
+
+    <div class="d-flex justify-content-center align-items-center flex-column text-white center1">
+      <h1>Register</h1>
+      <p>Hogwarts School of Witchcraft and Wizardry, often shortened to Hogwarts, was a Scottish wizarding school located in the Scottish Highlands.</p>
+    </div>
+  </div> -->
+  
+
+    <div class="register">
+    <div class="row container firstPart">
+
+        <div class="col-lg-6">
+            <div class="leftpart">
+              <div>
+                <h1>
+                    HOGWARTS 
+                  </h1>
+                  <h3>
+                    School of Witchcraft and Wizardry
+                  </h3>
+                  <h2>
+                    Join our community of magic
+                  </h2>
+              </div>
+              <div>
+                <div class="d-flex mt-5 fs-4">
+                    <i class="fa-solid fa-broom-ball"></i>
+                    <p>Take part in playing quidditch</p>
+                </div>
+                <div class="d-flex mt-5 fs-4">
+                    <i class="fa-solid fa-broom-ball"></i>
+                    <p>Take part in playing quidditch</p>
+                </div>
+                <div class="d-flex mt-5 fs-4">
+                    <i class="fa-solid fa-broom-ball"></i>
+                    <p>Take part in playing quidditch</p>
+                </div>
+                
+              </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="rightpart">
+              <div class="one ms-5 ps-3">
+                <h1>Let's Register <span><i class="fa-solid fa-wand-sparkles"></i></span></h1>
+              </div>
+
+
+
+                 <form [formGroup]="myForm"  class="form" (ngSubmit)="onSubmit">
+
+
+                  <mat-form-field class="form-element">
+                    <input matInput placeholder="Name" formControlName="name">
+                    <mat-error *ngIf="!myForm.controls['name'].valid && myForm.controls['name'].touched">
+                      {{ titleAlert }}
+                    </mat-error>
+                  </mat-form-field>
+
+
+                  <mat-form-field class="form-element">
+                    <input matInput placeholder="Surname" formControlName="surname">
+                    <mat-error *ngIf="!myForm.controls['surname'].valid && myForm.controls['surname'].touched">
+                      {{ titleAlert }}
+                    </mat-error>
+                  </mat-form-field>
+
+                  <mat-form-field class="form-element">
+                    <input matInput placeholder="Emailaddress" formControlName="email">
+                    <mat-error *ngIf="!myForm.controls['email'].valid && myForm.controls['email'].touched">
+                      {{ getErrorEmail() }}
+                    </mat-error>
+                  </mat-form-field>
+              
+                  
+              
+                  
+              
+                  <mat-form-field class="form-element">
+                    <input matInput placeholder="Password" formControlName="password" [type]="changetype?'password':'text'"> 
+                    <span class="eye-icon" (click)="viewpass()">
+                      <i [ngClass]="visible?'fa fa-eye':'fa fa-eye-slash'"></i>
+                    </span>
+                    <mat-hint>Choose a password of at least eight characters, one uppercase letter and one number</mat-hint>
+                    <mat-error *ngIf="!myForm.controls['password'].valid && myForm.controls['password'].touched">
+                      {{ getErrorPassword() }}
+                    </mat-error>
+                  </mat-form-field>
+
+                  <mat-form-field appearance="fill">
+                    <mat-label>Enter your birth date</mat-label>
+                    <input matInput [matDatepicker]="picker" max="{{Back10Year | date:'yyyy-MM-dd'}}">
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                  </mat-form-field>
+                  
+              
+                
+                  <div class="form-element button1">
+                    <button mat-raised-button type="submit" class="button" [disabled]="!myForm.valid">Submit Form</button>
+                  </div>
+              
+                </form>
+
+
+
+            </div>
+        </div>
+      </div>
+
+
+      <div class="container-fluid list">
+        <div class="row">
+          <div class="col-lg-8">
+            <h1 class="text-center">Hogwarts 1st year Student Supply List!</h1>
+            <div class="row">
+              <div class="col-lg-6">
+                <h2>To do</h2>
+
+                <div cdkDropList #todoList="cdkDropList" [cdkDropListData]="todo" [cdkDropListConnectedTo]="[doneList]" class="example-list"
+                 (cdkDropListDropped)="drop($event)">
+                  <div class="example-box" *ngFor="let item of todo" cdkDrag>{{item}}</div>
+                </div>
+              </div>
+
+              <div class="col-lg-6">
+                <h2>Done</h2>
+                <h4> Slide what you have done in todo list to here.</h4>
+
+                <div cdkDropList #doneList="cdkDropList" [cdkDropListData]="done" [cdkDropListConnectedTo]="[todoList]" class="example-list"
+                 (cdkDropListDropped)="drop($event)">
+                  <div class="example-box" *ngFor="let item of done" cdkDrag>{{item}}</div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          
+
+          <div class="col-lg-4">
+            <mat-table #table [dataSource]="dataSource">
+
+              <!-- Position Column -->
+              <ng-container matColumnDef="position">
+                <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.number}} </mat-cell>
+              </ng-container>
+          
+              <!-- Name Column -->
+              <ng-container matColumnDef="name">
+                <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+              </ng-container>
+          
+              <!-- Weight Column -->
+              <ng-container matColumnDef="weight">
+                <mat-header-cell *matHeaderCellDef> Writer </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.writer}} </mat-cell>
+              </ng-container>
+          
+            
+          
+              <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+              <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+            </mat-table>
+          </div>
+
+        </div>
+      </div>
+
+</div>
+<!-- 
+  <app-footer></app-footer> -->
