@@ -45,6 +45,7 @@
             <div class="rightpart">
               <div class="one ms-5 ps-3">
                 <h1>Let's Register <span><i class="fa-solid fa-wand-sparkles"></i></span></h1>
+                <h4>(People who are at least 10 years old can register!)</h4>
               </div>
 
 
@@ -92,7 +93,7 @@
                   <mat-form-field appearance="fill">
                     <mat-label>Enter your birth date</mat-label>
                     <input matInput [matDatepicker]="picker" max="{{Back10Year | date:'yyyy-MM-dd'}}">
-                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-hint class="text-danger">MM/DD/YYYY</mat-hint>
                     <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
                     <mat-datepicker #picker></mat-datepicker>
                   </mat-form-field>
@@ -116,6 +117,7 @@
         <div class="row">
           <div class="col-lg-8">
             <h1 class="text-center">Hogwarts 1st year Student Supply List!</h1>
+            <h4 class="text-center"> (Slide what you have done in todo list from to do to done)</h4>
             <div class="row">
               <div class="col-lg-6">
                 <h2>To do</h2>
@@ -128,7 +130,7 @@
 
               <div class="col-lg-6">
                 <h2>Done</h2>
-                <h4> Slide what you have done in todo list to here.</h4>
+                
 
                 <div cdkDropList #doneList="cdkDropList" [cdkDropListData]="done" [cdkDropListConnectedTo]="[todoList]" class="example-list"
                  (cdkDropListDropped)="drop($event)">
@@ -140,22 +142,22 @@
           </div>
           
 
-          <div class="col-lg-4">
+          <!-- <div class="col-lg-4">
             <mat-table #table [dataSource]="dataSource">
 
-              <!-- Position Column -->
+              
               <ng-container matColumnDef="position">
                 <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
                 <mat-cell *matCellDef="let element"> {{element.number}} </mat-cell>
               </ng-container>
           
-              <!-- Name Column -->
+              
               <ng-container matColumnDef="name">
                 <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
                 <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
               </ng-container>
           
-              <!-- Weight Column -->
+              
               <ng-container matColumnDef="weight">
                 <mat-header-cell *matHeaderCellDef> Writer </mat-header-cell>
                 <mat-cell *matCellDef="let element"> {{element.writer}} </mat-cell>
@@ -166,7 +168,7 @@
               <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
               <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
             </mat-table>
-          </div>
+          </div> -->
 
         </div>
       </div>

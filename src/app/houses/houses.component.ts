@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {MatBottomSheet, MatBottomSheetRef} from '@angular/material/bottom-sheet';
+import { Router } from '@angular/router';
 import { BottomSheetComponent } from '../bottom-sheet/bottom-sheet.component';
 
 @Component({
@@ -8,10 +9,14 @@ import { BottomSheetComponent } from '../bottom-sheet/bottom-sheet.component';
   styleUrls: ['./houses.component.scss']
 })
 export class HousesComponent {
-  constructor(private _bottomSheet: MatBottomSheet) {}
+  constructor(private _bottomSheet: MatBottomSheet,public router:Router) {}
 
   openBottomSheet(): void {
-    this._bottomSheet.open(BottomSheetComponent);
-  }
-  
+  let sheet =   this._bottomSheet.open(BottomSheetComponent);
+  sheet.afterDismissed().subscribe(x => {
+  this.router.navigate(['/houses']);
+  });
+}
+
+
 }

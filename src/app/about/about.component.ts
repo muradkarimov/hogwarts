@@ -36,10 +36,16 @@ export class AboutComponent {
   constructor(public dialog: MatDialog) {}
 
   openDialog() {
-    const dialogRef = this.dialog.open(DialogBoxComponent);
+    const dialogRef = this.dialog.open(DialogBoxComponent,{
+      maxWidth: '100vw',
+      maxHeight: '100vh',
+      height: '100%',
+      width: '100%'
+    });
 
     dialogRef.afterClosed().subscribe((result: any) => {
       console.log(`Dialog result: ${result}`);
+      
     });
   }
   centered = false;
@@ -48,4 +54,9 @@ export class AboutComponent {
 
   radius: number | undefined;
   color: string | undefined;
+
+
+
+
+ 
 }

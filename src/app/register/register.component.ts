@@ -48,7 +48,7 @@ export class RegisterComponent {
     });
   }
   getErrorEmail() {
-    return this.myForm.get('email').hasError('required') ? 'Field is required' :
+    return this.myForm.get('email').hasError('required') ? 'This field is required' :
       this.myForm.get('email').hasError('pattern') ? 'Not a valid emailaddress' :
         this.myForm.get('email').hasError('alreadyInUse') ? 'This emailaddress is already in use' : '';
   }
@@ -90,11 +90,6 @@ export class RegisterComponent {
 
   done = [
    ''
-    // 'Get up',
-    // 'Brush teeth',
-    // 'Take a shower',
-    // 'Check e-mail',
-    // 'Walk dog'
   ];
 
   drop(event: CdkDragDrop<string[]>) {

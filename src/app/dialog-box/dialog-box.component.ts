@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./dialog-box.component.scss']
 })
 export class DialogBoxComponent {
-
+ 
 }

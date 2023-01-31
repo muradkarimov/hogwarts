@@ -152,29 +152,36 @@ h1{
     img{
         border-radius: 20px;
         padding: 5px;
+        width: 50% !important;
+        margin-bottom: 10px;
     }
+    
 }
-.owl-theme .owl-nav [class*=owl-] {
-    background: rgb(158 158 158 / 28%) !important;
-    color: #222 !important;
-    height: 60px !important;
-    width: 60px !important;
-    border-radius: 50% !important;
-    position: absolute;
-    top: 50%;
-    transition: .3s all ease;
+
+.owl-theme .owl-nav{
+    position: relative;
 }
+// .owl-theme .owl-nav [class*=owl-] {
+//     background: rgb(158 158 158 / 28%) !important;
+//     color: #222 !important;
+//     height: 60px !important;
+//     width: 60px !important;
+//     border-radius: 50% !important;
+//     position: absolute;
+//     top: 50%;
+//     transition: .3s all ease;
+// }
 .staff .owl-next:hover, .staff .owl-prev:hover{
     background-color: #ff4000 !important;
     color: #fff !important;
 }
 .staff .owl-next{
-    right: -68px;
-    transform: translate(-50%, -50%);
+    right: -68px !important;
+    transform: translate(-50%, -50%) !important;
 }
 .staff .owl-prev{
-    left: -68px;
-    transform: translate(-50%, -50%);
+    left: -68px !important;
+    transform: translate(-50%, -50%) !important;
 }
 .staff .owl-next i, .staff .owl-prev i{
     font-size: 24px;
@@ -204,3 +211,5 @@ h1{
         margin-top: 10px !important;
     }
   }
+
+ 
