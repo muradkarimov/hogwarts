@@ -45,3 +45,30 @@
         background-position: 500px 500px, 400px 400px, 300px 300px;
     }
 }
+@media only screen and (max-width:223px) {
+    .flex-column1{
+        h1{
+            font-size: 15px;
+        }
+        p{
+            font-size: 8px;}
+    }
+}
+@media only screen and (min-width:223px) and (max-width: 390px) {
+    .flex-column1{
+        h1{
+            font-size: 20px;
+        }
+        p{
+            font-size: 8px;}
+    }
+  }
+  @media only screen and (min-width:390px) and (max-width: 600px) {
+    .flex-column1{
+        h1{
+            font-size: 30px;
+        }
+        p{
+            font-size: 18px;}
+    }
+  }

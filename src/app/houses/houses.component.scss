@@ -51,7 +51,8 @@ text-align: center;
     margin-top: 100px;
     position: relative;
     text-align: center;
-    height: 500px;
+    height: auto;
+    padding-bottom: 10px;
     // img{
     //     width: 50%;
     //     height: auto;
@@ -75,8 +76,25 @@ text-align: center;
     align-items: center;
     justify-content: center;
 }
-@media only screen and (max-width: 990px) {
+@media only screen and (min-width:360px) and (max-width: 990px) {
     .hat img {
       width: 50%;
+    }
+  }
+
+  @media only screen and (max-width: 360px)  {
+    mat-card{
+        width: 100%;
+        margin-left: 15px;
+    }
+    .center1{
+        p{
+            width: 300px !important;
+        }
+    }
+    .logo{
+        img{
+            width: 300px;
+        }
     }
   }
