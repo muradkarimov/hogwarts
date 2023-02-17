@@ -115,11 +115,11 @@
 
       <div class="container-fluid list">
         <div class="row">
-          <div class="col-lg-8">
+          <div class="col-lg-7">
             <h1 class="text-center">Hogwarts 1st year Student Supply List!</h1>
             <h4 class="text-center"> (Slide what you have done in todo list from to do to done)</h4>
             <div class="row">
-              <div class="col-lg-6">
+              <div class="col-lg-6 todo">
                 <h2>To do</h2>
 
                 <div cdkDropList #todoList="cdkDropList" [cdkDropListData]="todo" [cdkDropListConnectedTo]="[doneList]" class="example-list"
@@ -128,7 +128,7 @@
                 </div>
               </div>
 
-              <div class="col-lg-6">
+              <div class="col-lg-6 todo">
                 <h2>Done</h2>
                 
 
@@ -142,33 +142,38 @@
           </div>
           
 
-          <!-- <div class="col-lg-4">
+          <div class="col-lg-5">
+            <h1 class="text-center subject">Subjects for first year</h1>
             <mat-table #table [dataSource]="dataSource">
 
               
               <ng-container matColumnDef="position">
                 <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
-                <mat-cell *matCellDef="let element"> {{element.number}} </mat-cell>
+                <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
               </ng-container>
           
               
               <ng-container matColumnDef="name">
-                <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
-                <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+                <mat-header-cell *matHeaderCellDef> Lesson </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.Lesson}} </mat-cell>
               </ng-container>
           
               
               <ng-container matColumnDef="weight">
-                <mat-header-cell *matHeaderCellDef> Writer </mat-header-cell>
-                <mat-cell *matCellDef="let element"> {{element.writer}} </mat-cell>
+                <mat-header-cell *matHeaderCellDef> Teacher </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.Teacher}} </mat-cell>
               </ng-container>
           
             
-          
+              <ng-container matColumnDef="symbol">
+                <mat-header-cell *matHeaderCellDef> Spell </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.Spell}} </mat-cell>
+              </ng-container>
+
               <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
               <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
             </mat-table>
-          </div> -->
+          </div>
 
         </div>
       </div>

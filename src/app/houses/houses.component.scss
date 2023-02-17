@@ -80,6 +80,20 @@ text-align: center;
     .hat img {
       width: 50%;
     }
+    .center1{
+        p{
+            width: 300px !important;
+        }
+    }
+    .logo{
+        img{
+            width: 300px;
+        }
+    }
+    mat-card{
+        width: 100%;
+        margin-left: 15px;
+    }
   }
 
   @media only screen and (max-width: 360px)  {

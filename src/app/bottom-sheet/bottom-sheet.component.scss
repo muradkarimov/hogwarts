@@ -1,4 +1,4 @@
-.bottom .bottom1{
+.bottom {
     position: relative;
 }
 .col-lg-3 button{
@@ -11,6 +11,14 @@
     color: brown;
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 80%;
     transform: translate(-50%,-50%);
+}
+
+@media only screen and (max-width: 410px)  {
+    .col-lg-3 span i{
+        top: 100%;
+        left: 50%;
+    }
+
 }

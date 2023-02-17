@@ -6,6 +6,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 *{
     font-family: 'Source Code Pro', monospace;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 .router-link-active{
     color: white !important;

@@ -19,7 +19,7 @@ export class BottomSheetComponent {
 
 
   closePage() {
-    this.toDisplay = !this.toDisplay;
+    this._bottomSheetRef.dismiss();
    
   }
   

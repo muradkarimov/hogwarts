@@ -191,7 +191,7 @@ h1{
     transform: translate(-50%,-50%);
 }
 .faq{
-    padding-top: 30px;
+    padding: 30px;
     margin-top: 150px;
     background-image: url(../../assets/images/magic-lights-blue-background_1053-44.webp);
     width: 100%;
@@ -212,8 +212,9 @@ h1{
 
   @media only screen and (max-width: 360px)  {
     mat-expansion-panel{
-        padding-top: 15px !important;
-        height: 70px !important;
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
+        // height: 70px !important;
     }
     .video{
         margin-left: 20px;
@@ -225,7 +226,7 @@ h1{
     }
     .faq{
         h1{
-            margin-bottom: 0px;
+            margin-bottom: 10px !important;
         }
     }
    }
